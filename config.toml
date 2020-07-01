@@ -1,0 +1,51 @@
+baseURL = "https://chadkouse.xyz"
+languageCode = "en-us"
+title = "Chad Kouse"
+theme = "m10c"
+
+[params]
+    author = "Chad Kouse"
+    description = "I'm a software engineer / hacker always striving to get closer to the source."
+    homeSubtitle = "I'm a software engineer / hacker always striving to get closer to the source."
+    
+[languages]
+  [languages.en]
+    title = "Chad Kouse"
+    subtitle = "I'm a software engineer / hacker always striving to get closer to the source."
+    keywords = "chad kouse"
+    copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
+    readOtherPosts = "Read other posts"
+
+    [languages.en.params.logo]
+      logoText = "$ cd /home/"
+      logoHomeLink = "/"
+
+
+[[menu.main]]
+    identifier = "blog"
+    name = "Blog"
+    url = "/posts"
+
+[params.portrait]
+    path = "/avatar.jpg"
+    alt = "Chad Kouse"
+
+[[params.social]]
+  name = "github"
+  url = "https://github.com/chadkouse"
+
+[[params.social]]
+  name = "linkedin"
+  url = "https://www.linkedin.com/in/chadkouse/"
+
+[[params.social]]
+  name = "rss"
+  url = "/index.xml"
+
+[deployment]
+order = [".jpg$", ".gif$"]
+
+[[deployment.targets]]
+name = "awsdeployment"
+URL = "s3://chadkouse.xyz?region=us-east-1"
+cloudFrontDistributionID = "E11L7ERRFVV3C8"
