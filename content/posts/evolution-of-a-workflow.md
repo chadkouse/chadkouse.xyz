@@ -47,9 +47,9 @@ multiple, or all of the virtual desktops at once (with different shapes and
 locations in each one).  It's from suckless so it adheres to the suckless
 philosophy, which may not be for everyone. What this ultimately means is that
 you need to apply patches to the source code if you want anything beyong the
-basic functionaly - and you need to rebuild the app to change any configuration
+basic functionality and you need to rebuild the app to change any configuration
 options.  Those two key points require you to do a bit more work to get your
-customized version if the application running but the source code is clear
+customized version of the application running but the source code is clear
 and easy to work with.  I've tried other tiling window managers since then:
 bspwn, awesome, xmonad, herbstluftwm -- but I've always come back to dwm. It
 just makes the most sense to my brain and enables my workflow to be how I want.
