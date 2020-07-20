@@ -27,7 +27,7 @@ combined with the rolling release model -- plus of course sometimes you just
 wanna go flex (kidding.. kind of)
 
 As I mentioned, I use dwm for my window manager -- so the distro really doesn't
-matter that much.  A lot of destros are debian / ubuntu based and what
+matter that much.  A lot of distros are debian / ubuntu based and what
 differentiates them from each other are the preconfigured desktop environments
 and the package managers.  The arch package manager works fine for me so I'm 
 good to go there.  Plus part of my philosophy is to strip away the layers of
