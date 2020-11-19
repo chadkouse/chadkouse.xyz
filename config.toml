@@ -20,6 +20,8 @@ theme = "m10c"
       logoText = "$ cd /home/"
       logoHomeLink = "/"
 
+[markup.goldmark.renderer]
+    unsafe = true
 
 [[menu.main]]
     identifier = "blog"
