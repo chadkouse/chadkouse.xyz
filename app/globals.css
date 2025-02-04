@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --background-alt: #f3f3f3;
+  --foreground: #242930;
+  --link: rgb(61, 139, 116);
+  --link-hover: rgba(79, 168, 118, 0.7);
+  --invert: #000000;
+
+  a {
+    color: var(--link);
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 0.15s;
+  }
+  a:hover {
+    color: var(--link-hover)
+  }
+  a svg {
+    @apply inline-block;
+    @apply mx-1;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #242930;
+    --background-alt: #353b43;
+    --foreground: #afbac4;
+    --link: rgba(87, 204, 138, 1);
+    --link-hover: rgba(87, 204, 138, .7);
+    --invert: #FFFFFF;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
