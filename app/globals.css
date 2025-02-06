@@ -1,6 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@tailwind variants;
+
+@custom-variant dark (&:where(.dark, .dark *)); 
 
 :root {
   --background: #ffffff;
@@ -25,15 +28,13 @@
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #242930;
-    --background-alt: #353b43;
-    --foreground: #afbac4;
-    --link: rgba(87, 204, 138, 1);
-    --link-hover: rgba(87, 204, 138, .7);
-    --invert: #FFFFFF;
-  }
+.dark {
+  --background: #242930;
+  --background-alt: #353b43;
+  --foreground: #afbac4;
+  --link: rgba(87, 204, 138, 1);
+  --link-hover: rgba(87, 204, 138, .7);
+  --invert: #FFFFFF;
 }
 
 body {

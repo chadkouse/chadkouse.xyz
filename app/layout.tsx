@@ -4,6 +4,7 @@ import { ThemeProvider } from 'next-themes'
 import "./globals.css";
 import Header from "./_components/Header";
 import Footer from "./_components/Footer";
+import ModeToggle from "./_components/ModeToggle";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,10 +28,16 @@ export default function RootLayout({
 }>) {
   return (
     <html style={{fontSize: "16px"}} lang="en" suppressHydrationWarning={true}>
+      <head>
+        <script type="text/javascript" dangerouslySetInnerHTML={{ __html: 'document.documentElement.classList.toggle("dark", localStorage.theme === "dark" || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches));' }} />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <ThemeProvider>
+          <div className="absolute top-0 right-0 mt-2 mr-2">
+            <ModeToggle />
+          </div>
         <div className="flex flex-col w-screen min-h-screen">
           <div className="flex flex-col md:flex-row flex-grow items-stretch">
             <Header></Header>
