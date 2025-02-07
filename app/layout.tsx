@@ -45,7 +45,7 @@ export default function RootLayout({
         <div className="flex flex-col w-screen min-h-screen">
           <div className="flex flex-col md:flex-row flex-grow items-stretch">
             <Header></Header>
-            <main className="bg-background-alt md:ml-[20rem] w-full">
+            <main className="bg-background-alt md:ml-[20rem] w-full flex-grow">
               <div className="my-10 px-4">
                 {children}
               </div>
