@@ -7,7 +7,6 @@ const ColorPicker = lazy(() => import("./ColorPicker"));
 
 export default function ColorPickerModal() {
   const handleColorChanged = useCallback((color: Color): void => {
-    console.log("Got Color Change", color);
     document.documentElement.style.setProperty('--link', `#${color.hex}FF`);
     document.documentElement.style.setProperty('--link-hover', `#${color.hex}AA`);
     localStorage.setItem("link-color", color.hex);

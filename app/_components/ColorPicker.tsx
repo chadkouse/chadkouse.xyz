@@ -258,7 +258,6 @@ export interface ColorPickerProps {
 const ColorPicker = (props:ColorPickerProps) => {
   // Initialize from controlled prop or a default
   const [color, setColor] = useState<Color>(() => {
-    console.log("props.default_value", props.default_value);
     const default_color = props.default_value ?? "";
     const hex = sanitizeHex(props.default_value ?? default_color);
     const hsl = hexToHsl({ hex: hex });
@@ -275,7 +274,6 @@ const ColorPicker = (props:ColorPickerProps) => {
     }
   };
   useEffect(() => {
-    console.log("Color Changed", color.hex, props.default_value);
     if (color.hex.length != 6 || typeof props?.onColorChanged !== 'function') return;
     props.onColorChanged(color);
   }, [props, color]);
