@@ -36,7 +36,7 @@ export default function ColorPickerModal() {
       <button className="hover:text-link-hover transition-colors" onClick={toggleColorPicker}>
         <ColorMix className="inline-block w-8 h-8"></ColorMix>
       </button>
-      <div ref={modalRef} aria-hidden className="absolute top-8 right-10 aria-hidden:hidden w-max z-10">
+      <div ref={modalRef} aria-hidden className="absolute top-8 right-10 aria-hidden:hidden w-max z-20">
         {colorReady && <ColorPicker default_value={color} onColorChanged={handleColorChanged} />}
       </div>
     </>
