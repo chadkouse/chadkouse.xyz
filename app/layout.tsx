@@ -5,6 +5,7 @@ import "./globals.css";
 import Header from "./_components/Header";
 import Footer from "./_components/Footer";
 import ModeToggle from "./_components/ModeToggle";
+import ColorPickerModal from "./_components/ColorPickerModal";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,13 +31,16 @@ export default function RootLayout({
     <html style={{fontSize: "16px"}} lang="en" suppressHydrationWarning={true}>
       <head>
         <script type="text/javascript" dangerouslySetInnerHTML={{ __html: 'document.documentElement.classList.toggle("dark", localStorage.theme === "dark" || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches));' }} />
+        <script type="text/javascript" dangerouslySetInnerHTML={{ __html: 'localStorage.getItem("link-color-expires") && localStorage.getItem("link-color-expires") > Date.now() && document.documentElement.style.setProperty("--link", `#${localStorage.getItem("link-color")}FF`);'}} />
+        <script type="text/javascript" dangerouslySetInnerHTML={{ __html: 'localStorage.getItem("link-color-expires") && localStorage.getItem("link-color-expires") > Date.now() && document.documentElement.style.setProperty("--link-hover", `#${localStorage.getItem("link-color")}AA`);'}} />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <ThemeProvider>
-          <div className="absolute top-0 right-0 mt-2 mr-2">
+          <div className="absolute top-0 right-0 mt-2 mr-2 flex flex-col">
             <ModeToggle />
+            <ColorPickerModal />
           </div>
         <div className="flex flex-col w-screen min-h-screen">
           <div className="flex flex-col md:flex-row flex-grow items-stretch">

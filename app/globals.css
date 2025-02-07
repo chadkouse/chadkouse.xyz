@@ -9,8 +9,8 @@
   --background: #ffffff;
   --background-alt: #f3f3f3;
   --foreground: #242930;
-  --link: rgb(61, 139, 116);
-  --link-hover: rgba(79, 168, 118, 0.7);
+  --link: #3d8b74FF;/* rgb(61, 139, 116);*/
+  --link-hover: #4fa876B2; /* rgba(79, 168, 118, 0.7); */
   --invert: #000000;
 
   a {

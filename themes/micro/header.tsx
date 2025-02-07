@@ -11,7 +11,7 @@ const Header = () => {
           width={200}
           height={200}
           alt="Chad Kouse's Avatar"
-          className="max-w-[15rem] max-h-[15rem] rounded-full border-8 border-solid border-link"
+          className="max-w-[15rem] max-h-[15rem] rounded-full border-8 border-solid border-link hover:border-link-hover transition-colors"
         />
       </Link>
       <h1 className="text-4xl m-8 font-bold text-invert md:text-2xl">Chad Kouse</h1>

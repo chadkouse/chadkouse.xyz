@@ -21,12 +21,12 @@ const ModeToggle = () => {
 
   return (
     <div className="text-primary">
-      <div className="hidden dark:inline-block" onClick={() => toggleDisplayMode("light")}>
+      <button className="hidden dark:inline-block hover:text-link-hover transition-colors" onClick={() => toggleDisplayMode("light")}>
         <Sun className="inline-block w-8 h-8" />
-      </div>
-      <div className="dark:hidden" onClick={() => toggleDisplayMode("dark")}>
+      </button>
+      <button className="dark:hidden hover:text-link-hover transition-colors" onClick={() => toggleDisplayMode("dark")}>
         <Moon className="inline-block w-8 h-8" />
-      </div>
+      </button>
     </div>
   )
 }
